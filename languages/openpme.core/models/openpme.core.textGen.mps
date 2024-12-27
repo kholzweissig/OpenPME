@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="r2co" ref="r:15616bdb-5f06-41a2-ba85-ee0c68a0d3dd(openpme.core.structure)" implicit="true" />
+    <import index="5oki" ref="r:ebc5ff6c-54ad-44cc-986b-956c5e8ea76e(openpme.statements.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -902,10 +903,15 @@
               <node concept="2BGw6n" id="47KNQXwoAa5" role="lcghm" />
             </node>
           </node>
-          <node concept="2OqwBi" id="47KNQXwoA9P" role="2GsD0m">
-            <node concept="117lpO" id="47KNQXwoA9O" role="2Oq$k0" />
-            <node concept="3Tsc0h" id="47KNQXwoA9L" role="2OqNvi">
-              <ref role="3TtcxE" to="r2co:1Uhwoc6omJJ" resolve="body" />
+          <node concept="2OqwBi" id="4UasPjrXGa2" role="2GsD0m">
+            <node concept="2OqwBi" id="47KNQXwoA9P" role="2Oq$k0">
+              <node concept="117lpO" id="47KNQXwoA9O" role="2Oq$k0" />
+              <node concept="3TrEf2" id="4UasPjrXFXQ" role="2OqNvi">
+                <ref role="3Tt5mk" to="r2co:1Uhwoc6omJJ" resolve="body" />
+              </node>
+            </node>
+            <node concept="3Tsc0h" id="4UasPjrXGm3" role="2OqNvi">
+              <ref role="3TtcxE" to="5oki:70bNw4gtx2q" resolve="statements" />
             </node>
           </node>
         </node>

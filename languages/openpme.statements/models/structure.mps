@@ -24,7 +24,6 @@
         <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
       </concept>
-      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -107,9 +106,6 @@
     <property role="R5$K7" value="true" />
     <property role="R4oN_" value="an empty statement" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="70bNw4gtpSG" role="PzmwI">
-      <ref role="PrY4T" node="70bNw4gtmOZ" resolve="GlobalVariableDeclarationProvider" />
-    </node>
   </node>
   <node concept="1TIwiD" id="aSJlMIIiSq">
     <property role="EcuMT" value="196114789556629018" />
@@ -125,9 +121,6 @@
     <node concept="PrWs8" id="70bNw4gtDyl" role="PzmwI">
       <ref role="PrY4T" to="caxt:70bNw4gtDwF" resolve="ITyped" />
     </node>
-    <node concept="PrWs8" id="70bNw4gtDyv" role="PzmwI">
-      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
-    </node>
     <node concept="PrWs8" id="1Uhwoc6Dq3Y" role="PzmwI">
       <ref role="PrY4T" to="r2co:1Uhwoc6Dq3P" resolve="IParticleContainer" />
     </node>
@@ -138,27 +131,20 @@
       <ref role="20lvS9" to="caxt:2cc5eidBZl2" resolve="Expression" />
     </node>
   </node>
-  <node concept="PlHQZ" id="70bNw4gtmOZ">
-    <property role="EcuMT" value="8073773260958166335" />
-    <property role="TrG5h" value="GlobalVariableDeclarationProvider" />
-  </node>
   <node concept="1TIwiD" id="70bNw4gtx2g">
     <property role="EcuMT" value="8073773260958208144" />
     <property role="TrG5h" value="StatementList" />
     <property role="R4oN_" value="statement list" />
     <ref role="1TJDcQ" node="6sMVU6wHrBz" resolve="Statement" />
-    <node concept="PrWs8" id="70bNw4gtx2h" role="PzmwI">
-      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
-    </node>
-    <node concept="PrWs8" id="70bNw4gtx2m" role="PzmwI">
-      <ref role="PrY4T" node="70bNw4gtmOZ" resolve="GlobalVariableDeclarationProvider" />
-    </node>
     <node concept="1TJgyj" id="70bNw4gtx2q" role="1TKVEi">
       <property role="IQ2ns" value="8073773260958208154" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="statements" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="6sMVU6wHrBz" resolve="Statement" />
+    </node>
+    <node concept="PrWs8" id="3U5SKTX6CGl" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
   <node concept="1TIwiD" id="70bNw4gtx3a">

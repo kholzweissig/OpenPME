@@ -27,7 +27,6 @@
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
       <concept id="1237307900041" name="jetbrains.mps.lang.editor.structure.IndentLayoutIndentStyleClassItem" flags="ln" index="lj46D" />
       <concept id="1237308012275" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineStyleClassItem" flags="ln" index="ljvvj" />
-      <concept id="1237375020029" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineChildrenStyleClassItem" flags="ln" index="pj6Ft" />
       <concept id="1142886221719" name="jetbrains.mps.lang.editor.structure.QueryFunction_NodeCondition" flags="in" index="pkWqt" />
       <concept id="1142886811589" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_node" flags="nn" index="pncrf" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
@@ -172,11 +171,11 @@
         <ref role="1NtTu8" to="5oki:70bNw4gtx2q" resolve="statements" />
         <node concept="2iRkQZ" id="5WMTRp83is_" role="2czzBx" />
         <node concept="VPM3Z" id="5WMTRp83isA" role="3F10Kt" />
+        <node concept="lj46D" id="313D_s9cweM" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="l2Vlx" id="70bNw4gtx2W" role="2iSdaV" />
-      <node concept="pj6Ft" id="70bNw4gtx36" role="3F10Kt">
-        <property role="VOm3f" value="true" />
-      </node>
     </node>
   </node>
   <node concept="24kQdi" id="70bNw4gtx3C">
@@ -206,9 +205,6 @@
       <node concept="3F1sOY" id="1d1jgI9hedZ" role="3EZMnx">
         <ref role="1NtTu8" to="5oki:70bNw4gtx4x" resolve="ifTrue" />
         <node concept="ljvvj" id="1d1jgI9heh9" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="5WMTRp83q3a" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
@@ -245,9 +241,6 @@
         <node concept="ljvvj" id="1d1jgI9hers" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
-        <node concept="lj46D" id="5WMTRp83q3g" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
       </node>
       <node concept="3F0ifn" id="70bNw4gtx7c" role="3EZMnx">
         <property role="3F0ifm" value="end" />
@@ -275,7 +268,7 @@
       </node>
       <node concept="3F1sOY" id="70bNw4gtDv3" role="3EZMnx">
         <ref role="1NtTu8" to="5oki:70bNw4gtDtP" resolve="body" />
-        <node concept="lj46D" id="70bNw4gtDva" role="3F10Kt">
+        <node concept="ljvvj" id="3U5SKTXkYgg" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
