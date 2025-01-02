@@ -262,8 +262,8 @@
                     </node>
                   </node>
                   <node concept="2YIFZM" id="3U5SKTX4NI1" role="37wK5m">
-                    <ref role="37wK5l" to="o8zo:6t3ylNOzI9Y" resolve="forNamedElements" />
                     <ref role="1Pybhc" to="o8zo:7ipADkTevLm" resolve="SimpleRoleScope" />
+                    <ref role="37wK5l" to="o8zo:6t3ylNOzI9Y" resolve="forNamedElements" />
                     <node concept="13iPFW" id="3U5SKTX4NI2" role="37wK5m" />
                     <node concept="359W_D" id="3U5SKTX4NI3" role="37wK5m">
                       <ref role="359W_E" to="r2co:6z0p_feMAuu" resolve="TypeOfSimulation" />

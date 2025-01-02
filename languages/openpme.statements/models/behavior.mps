@@ -225,7 +225,6 @@
         <reference id="1153944258490" name="variable" index="2Gs0qQ" />
       </concept>
       <concept id="1160612413312" name="jetbrains.mps.baseLanguage.collections.structure.AddElementOperation" flags="nn" index="TSZUe" />
-      <concept id="1171391069720" name="jetbrains.mps.baseLanguage.collections.structure.GetIndexOfOperation" flags="nn" index="2WmjW8" />
       <concept id="1172254888721" name="jetbrains.mps.baseLanguage.collections.structure.ContainsOperation" flags="nn" index="3JPx81" />
     </language>
   </registry>
@@ -459,8 +458,9 @@
                       <node concept="37vLTw" id="3U5SKTX6Pch" role="2Oq$k0">
                         <ref role="3cqZAo" node="3U5SKTX6Gts" resolve="statements" />
                       </node>
-                      <node concept="2WmjW8" id="3U5SKTX6R2_" role="2OqNvi">
-                        <node concept="37vLTw" id="3U5SKTX6Rj_" role="25WWJ7">
+                      <node concept="liA8E" id="3VDCHgn4iYT" role="2OqNvi">
+                        <ref role="37wK5l" to="33ny:~List.indexOf(java.lang.Object)" resolve="indexOf" />
+                        <node concept="37vLTw" id="3VDCHgn4jd$" role="37wK5m">
                           <ref role="3cqZAo" node="313D_s8YDyS" resolve="child" />
                         </node>
                       </node>
@@ -584,7 +584,6 @@
         </node>
       </node>
     </node>
-    <node concept="2tJIrI" id="3U5SKTX83b1" role="jymVt" />
     <node concept="2YIFZL" id="3U5SKTX9gE1" role="jymVt">
       <property role="TrG5h" value="updateScope" />
       <node concept="3clFbS" id="3U5SKTX9gE3" role="3clF47">

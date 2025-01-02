@@ -153,7 +153,7 @@
               <property role="3oM_SC" value="asignments" />
             </node>
             <node concept="3oM_SD" id="2QlWK_gUSDC" role="1PaTwD">
-              <property role="3oM_SC" value="update" />
+              <property role="3oM_SC" value="write" />
             </node>
             <node concept="3oM_SD" id="2QlWK_gUSDS" role="1PaTwD">
               <property role="3oM_SC" value="variables" />
@@ -166,6 +166,15 @@
             </node>
             <node concept="3oM_SD" id="2QlWK_gUSFm" role="1PaTwD">
               <property role="3oM_SC" value="fieldcontainers" />
+            </node>
+            <node concept="3oM_SD" id="WotCJ1n8Dz" role="1PaTwD">
+              <property role="3oM_SC" value="(only" />
+            </node>
+            <node concept="3oM_SD" id="WotCJ1n8E2" role="1PaTwD">
+              <property role="3oM_SC" value="a" />
+            </node>
+            <node concept="3oM_SD" id="WotCJ1n8Eo" role="1PaTwD">
+              <property role="3oM_SC" value="read)" />
             </node>
           </node>
         </node>
