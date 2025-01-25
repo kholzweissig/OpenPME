@@ -24,7 +24,6 @@
         <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
       </concept>
-      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -191,9 +190,6 @@
     <node concept="PrWs8" id="1d1jgI9d8e4" role="PzmwI">
       <ref role="PrY4T" to="r2co:1Uhwoc6Dq3P" resolve="IContainer" />
     </node>
-    <node concept="PrWs8" id="WotCJ1ncXq" role="PzmwI">
-      <ref role="PrY4T" node="WotCJ1ncXm" resolve="IDisruptiveStatement" />
-    </node>
   </node>
   <node concept="1TIwiD" id="1zc8QhKnQvW">
     <property role="EcuMT" value="1786842066448246780" />
@@ -205,10 +201,6 @@
     <property role="3GE5qa" value="variables" />
     <property role="TrG5h" value="VariableDeclerationInlined" />
     <ref role="1TJDcQ" node="aSJlMIIiSq" resolve="VariableDeclaration" />
-  </node>
-  <node concept="PlHQZ" id="WotCJ1ncXm">
-    <property role="EcuMT" value="1087749652626591574" />
-    <property role="TrG5h" value="IDisruptiveStatement" />
   </node>
 </model>
 
