@@ -66,6 +66,7 @@
       </concept>
       <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
+      <concept id="625126330682908270" name="jetbrains.mps.lang.editor.structure.CellModel_ReferencePresentation" flags="sg" stub="730538219795961225" index="3SHvHV" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
       </concept>
@@ -1560,6 +1561,12 @@
       <node concept="3F1sOY" id="57hfxDvvtqX" role="3EZMnx">
         <ref role="1NtTu8" to="r2co:57hfxDvvti4" resolve="containerReference" />
       </node>
+      <node concept="3F0ifn" id="7KLoqjJPTL8" role="3EZMnx">
+        <property role="3F0ifm" value="on" />
+      </node>
+      <node concept="3F1sOY" id="7KLoqjJPTMa" role="3EZMnx">
+        <ref role="1NtTu8" to="r2co:7KLoqjJQekX" resolve="containerPropertyReference" />
+      </node>
       <node concept="3F0ifn" id="57hfxDvwTTw" role="3EZMnx">
         <property role="3F0ifm" value="with self as " />
       </node>
@@ -1600,6 +1607,12 @@
       <node concept="3F0ifn" id="57hfxDvzlft" role="3EZMnx" />
       <node concept="3F1sOY" id="57hfxDvvyvj" role="3EZMnx">
         <ref role="1NtTu8" to="r2co:57hfxDvvti4" resolve="containerReference" />
+      </node>
+      <node concept="3F0ifn" id="7KLoqjJPTHl" role="3EZMnx">
+        <property role="3F0ifm" value="on" />
+      </node>
+      <node concept="3F1sOY" id="7KLoqjJPTJi" role="3EZMnx">
+        <ref role="1NtTu8" to="r2co:7KLoqjJQekX" resolve="containerPropertyReference" />
       </node>
       <node concept="3F0ifn" id="57hfxDvzlrS" role="3EZMnx">
         <property role="3F0ifm" value="with self as" />
@@ -1654,14 +1667,8 @@
       <node concept="3F0ifn" id="57hfxDvAWIl" role="3EZMnx">
         <property role="3F0ifm" value="interact" />
       </node>
-      <node concept="3F1sOY" id="4kdYsdpjZ1F" role="3EZMnx">
-        <ref role="1NtTu8" to="r2co:4kdYsdpjYVa" resolve="propertyReference" />
-      </node>
-      <node concept="3F0ifn" id="2GVf64qtJBv" role="3EZMnx">
-        <property role="3F0ifm" value="," />
-      </node>
-      <node concept="3F1sOY" id="4kdYsdpjZ1V" role="3EZMnx">
-        <ref role="1NtTu8" to="r2co:4kdYsdpjYVe" resolve="containerReference" />
+      <node concept="3F1sOY" id="7KLoqjJQels" role="3EZMnx">
+        <ref role="1NtTu8" to="r2co:7KLoqjJQelh" resolve="interactReference" />
       </node>
       <node concept="l2Vlx" id="57hfxDvAWIh" role="2iSdaV" />
     </node>
@@ -1673,14 +1680,8 @@
       <node concept="3F0ifn" id="57hfxDvAWMA" role="3EZMnx">
         <property role="3F0ifm" value="evolve" />
       </node>
-      <node concept="3F1sOY" id="VP92T2NZnQ" role="3EZMnx">
-        <ref role="1NtTu8" to="r2co:4KhtyPTkHZI" resolve="propertyReference" />
-      </node>
-      <node concept="3F0ifn" id="2GVf64qtJI1" role="3EZMnx">
-        <property role="3F0ifm" value="," />
-      </node>
-      <node concept="3F1sOY" id="VP92T2NZoa" role="3EZMnx">
-        <ref role="1NtTu8" to="r2co:4KhtyPTkHZL" resolve="containerReference" />
+      <node concept="3F1sOY" id="7KLoqjJQeld" role="3EZMnx">
+        <ref role="1NtTu8" to="r2co:7KLoqjJQel2" resolve="evolveReference" />
       </node>
       <node concept="l2Vlx" id="57hfxDvAWMn" role="2iSdaV" />
     </node>
@@ -1733,19 +1734,6 @@
         <property role="3F0ifm" value=")" />
       </node>
       <node concept="l2Vlx" id="2GVf64q67YP" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="2GVf64qDtFX">
-    <property role="3GE5qa" value="simulation.statements" />
-    <ref role="1XX52x" to="r2co:2GVf64qDtzm" resolve="CallEvolvePosition" />
-    <node concept="3EZMnI" id="2GVf64qDtGl" role="2wV5jI">
-      <node concept="3F0ifn" id="2GVf64qDtGB" role="3EZMnx">
-        <property role="3F0ifm" value="evolve position" />
-      </node>
-      <node concept="3F1sOY" id="4kdYsdpjPd2" role="3EZMnx">
-        <ref role="1NtTu8" to="r2co:4kdYsdpjPcU" resolve="containerReference" />
-      </node>
-      <node concept="l2Vlx" id="2GVf64qDtGo" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="4hNYxanLw3">
@@ -1818,6 +1806,39 @@
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="7KLoqjJPZ7d">
+    <property role="3GE5qa" value="simulation.expressions.access" />
+    <ref role="1XX52x" to="r2co:7KLoqjJPYH4" resolve="InteractReference" />
+    <node concept="3EZMnI" id="7KLoqjJPZ8M" role="2wV5jI">
+      <node concept="l2Vlx" id="7KLoqjJPZ8P" role="2iSdaV" />
+      <node concept="1iCGBv" id="7KLoqjK3jK6" role="3EZMnx">
+        <ref role="1NtTu8" to="r2co:7KLoqjJPZ0d" resolve="interact" />
+        <node concept="1sVBvm" id="7KLoqjK3jK7" role="1sWHZn">
+          <node concept="3SHvHV" id="7KLoqjK3jKc" role="2wV5jI" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="7KLoqjJPZfz">
+    <property role="3GE5qa" value="simulation.expressions.access" />
+    <ref role="1XX52x" to="r2co:7KLoqjJPYzs" resolve="EvolveReference" />
+    <node concept="3EZMnI" id="7KLoqjJPZgi" role="2wV5jI">
+      <node concept="l2Vlx" id="7KLoqjJPZgl" role="2iSdaV" />
+      <node concept="1iCGBv" id="7KLoqjK2hyo" role="3EZMnx">
+        <ref role="1NtTu8" to="r2co:7KLoqjJPYCx" resolve="evolve" />
+        <node concept="1sVBvm" id="7KLoqjK2hyp" role="1sWHZn">
+          <node concept="3SHvHV" id="7KLoqjK2hyu" role="2wV5jI" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="7KLoqjJQekS">
+    <property role="3GE5qa" value="simulation.expressions.access" />
+    <ref role="1XX52x" to="r2co:7KLoqjJQekJ" resolve="PositionPropertyReference" />
+    <node concept="3F0ifn" id="7KLoqjJQekU" role="2wV5jI">
+      <property role="3F0ifm" value="position" />
     </node>
   </node>
 </model>
