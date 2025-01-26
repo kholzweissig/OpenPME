@@ -27,6 +27,7 @@
         <child id="5895561670197228863" name="self_particle" index="ekCG_" />
         <child id="5895561670196843652" name="containerReference" index="eFeEu" />
         <child id="5895561670196863896" name="body" index="eFLQ2" />
+        <child id="8949041295588386109" name="containerPropertyReference" index="2jUoip" />
       </concept>
       <concept id="5895561670196842335" name="openpme.core.structure.Interact" flags="ng" index="eFf55">
         <child id="5895561670197229065" name="neighbor_particle" index="ekCwj" />
@@ -353,7 +354,7 @@
               <node concept="1wvtVb" id="2GVf64qELkA" role="1wvtUr">
                 <node concept="o2qFD" id="2GVf64qXJWB" role="1wvtVa">
                   <node concept="SDg2Y" id="2GVf64qXJWC" role="2$G181">
-                    <node concept="1XiV_f" id="4EWA5cPPz1b" role="H6eYf">
+                    <node concept="1XiV_f" id="1tRyLoZx7lb" role="H6eYf">
                       <ref role="1Xh6_M" node="7fWB5K9_wcA" resolve="p" />
                     </node>
                     <node concept="2qjxXw" id="4EWA5cPPz1e" role="H6eY9">
@@ -380,10 +381,10 @@
                               <property role="2$GKAX" value="7" />
                             </node>
                             <node concept="L8O6H" id="2GVf64quW59" role="2$G181">
-                              <node concept="1XiV_f" id="4EWA5cPPz1I" role="L8ObM">
+                              <node concept="1XiV_f" id="1tRyLoZx7le" role="L8ObM">
                                 <ref role="1Xh6_M" node="7fWB5K9_wcA" resolve="p" />
                               </node>
-                              <node concept="1XiV_f" id="4EWA5cPPz1O" role="L8OdJ">
+                              <node concept="1XiV_f" id="1tRyLoZx7lh" role="L8OdJ">
                                 <ref role="1Xh6_M" node="7fWB5K9_wcw" resolve="q" />
                               </node>
                             </node>
@@ -398,10 +399,10 @@
                               <property role="2$GKAX" value="4" />
                             </node>
                             <node concept="L8O6H" id="2GVf64quW6v" role="2$G181">
-                              <node concept="1XiV_f" id="4EWA5cPPz1R" role="L8ObM">
+                              <node concept="1XiV_f" id="1tRyLoZx7lk" role="L8ObM">
                                 <ref role="1Xh6_M" node="7fWB5K9_wcA" resolve="p" />
                               </node>
-                              <node concept="1XiV_f" id="4EWA5cPPz1X" role="L8OdJ">
+                              <node concept="1XiV_f" id="1tRyLoZx7ln" role="L8OdJ">
                                 <ref role="1Xh6_M" node="7fWB5K9_wcw" resolve="q" />
                               </node>
                             </node>
@@ -410,10 +411,10 @@
                       </node>
                     </node>
                     <node concept="28k0ba" id="2GVf64quW92" role="2$G18d">
-                      <node concept="1XiV_f" id="4EWA5cPPz20" role="28ka16">
+                      <node concept="1XiV_f" id="1tRyLoZx7lq" role="28ka16">
                         <ref role="1Xh6_M" node="7fWB5K9_wcA" resolve="p" />
                       </node>
-                      <node concept="1XiV_f" id="4EWA5cPPz26" role="28ka3W">
+                      <node concept="1XiV_f" id="1tRyLoZx7lt" role="28ka3W">
                         <ref role="1Xh6_M" node="7fWB5K9_wcw" resolve="q" />
                       </node>
                     </node>
@@ -423,6 +424,9 @@
             </node>
             <node concept="2G0pd6" id="7fWB5K9_wcA" role="ekCG_">
               <property role="TrG5h" value="p" />
+            </node>
+            <node concept="2qjxXw" id="1J_pvetNeYm" role="2jUoip">
+              <ref role="2qjxXB" node="4EWA5cPPyXL" resolve="force" />
             </node>
           </node>
           <node concept="SCFH9" id="4EWA5cPPz4g" role="1wvtUr">
@@ -586,6 +590,9 @@
                 <node concept="2G0pd6" id="4EWA5cPPz9J" role="ekCG_">
                   <property role="TrG5h" value="p_i" />
                 </node>
+                <node concept="2qjxXw" id="1J_pvetNeZo" role="2jUoip">
+                  <ref role="2qjxXB" node="4EWA5cPPyXL" resolve="force" />
+                </node>
               </node>
               <node concept="eFeVV" id="4EWA5cPPzcH" role="1wvtUr">
                 <node concept="PgV3M" id="4EWA5cPPzdT" role="eFeEu">
@@ -625,6 +632,9 @@
                 </node>
                 <node concept="2G0pd6" id="4EWA5cPPzcN" role="ekCG_">
                   <property role="TrG5h" value="p_e2" />
+                </node>
+                <node concept="2qjxXw" id="1J_pvetNeZq" role="2jUoip">
+                  <ref role="2qjxXB" node="4EWA5cPPyXG" resolve="velocity" />
                 </node>
               </node>
               <node concept="eFf55" id="4EWA5cPPzfM" role="1wvtUr">

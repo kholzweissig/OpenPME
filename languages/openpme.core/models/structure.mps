@@ -1117,7 +1117,6 @@
       <property role="IQ2ns" value="8949041295588386109" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="containerPropertyReference" />
-      <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="7KLoqjJQekI" resolve="ContainerPropertyReference" />
     </node>
     <node concept="1TJgyj" id="57hfxDvvyeo" role="1TKVEi">

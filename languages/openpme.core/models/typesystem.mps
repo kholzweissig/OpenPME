@@ -51,6 +51,7 @@
       <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
         <property id="1068580123138" name="value" index="3clFbU" />
       </concept>
+      <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6" />
       <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
@@ -111,6 +112,7 @@
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
       </concept>
+      <concept id="1171999116870" name="jetbrains.mps.lang.smodel.structure.Node_IsNullOperation" flags="nn" index="3w_OXm" />
       <concept id="1172008320231" name="jetbrains.mps.lang.smodel.structure.Node_IsNotNullOperation" flags="nn" index="3x8VRR" />
       <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI">
         <property id="1238684351431" name="asCast" index="1BlNFB" />
@@ -212,6 +214,22 @@
             <property role="3oM_SC" value="property" />
           </node>
           <node concept="3oM_SD" id="7KLoqjJQ_fm" role="1PaTwD" />
+        </node>
+      </node>
+      <node concept="3clFbJ" id="1tRyLoZvr5E" role="3cqZAp">
+        <node concept="3clFbS" id="1tRyLoZvr5G" role="3clFbx">
+          <node concept="3cpWs6" id="1tRyLoZvr7J" role="3cqZAp" />
+        </node>
+        <node concept="2OqwBi" id="1tRyLoZvs6o" role="3clFbw">
+          <node concept="2OqwBi" id="1tRyLoZvrjf" role="2Oq$k0">
+            <node concept="1YBJjd" id="1tRyLoZvr7M" role="2Oq$k0">
+              <ref role="1YBMHb" node="7KLoqjJQelL" resolve="fieldOperation" />
+            </node>
+            <node concept="3TrEf2" id="1tRyLoZvrX5" role="2OqNvi">
+              <ref role="3Tt5mk" to="r2co:7KLoqjJQekX" resolve="containerPropertyReference" />
+            </node>
+          </node>
+          <node concept="3w_OXm" id="1tRyLoZvssz" role="2OqNvi" />
         </node>
       </node>
       <node concept="3cpWs8" id="7KLoqjJQi7A" role="3cqZAp">

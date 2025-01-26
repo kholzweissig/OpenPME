@@ -27,22 +27,28 @@
         <child id="5895561670198660361" name="interact" index="eibcj" />
       </concept>
       <concept id="5895561670198806391" name="openpme.core.structure.CallInteract" flags="ng" index="eiJ_H">
-        <child id="4975907780726615754" name="propertyReference" index="sgxs9" />
-        <child id="4975907780726615758" name="containerReference" index="sgxsd" />
+        <child id="8949041295588386129" name="interactReference" index="2jUojP" />
       </concept>
       <concept id="5895561670198806469" name="openpme.core.structure.CallEvolve" flags="ng" index="eiJBv">
-        <child id="5481292159167684590" name="propertyReference" index="PgUB3" />
-        <child id="5481292159167684593" name="containerReference" index="PgUBs" />
+        <child id="8949041295588386114" name="evolveReference" index="2jUojA" />
       </concept>
       <concept id="5895561670196842721" name="openpme.core.structure.Evolve" flags="ng" index="eFeVV" />
       <concept id="5895561670196842942" name="openpme.core.structure.FieldOperation" flags="ng" index="eFeY$">
         <child id="5895561670197228863" name="self_particle" index="ekCG_" />
         <child id="5895561670196843652" name="containerReference" index="eFeEu" />
         <child id="5895561670196863896" name="body" index="eFLQ2" />
+        <child id="8949041295588386109" name="containerPropertyReference" index="2jUoip" />
       </concept>
       <concept id="5895561670196842335" name="openpme.core.structure.Interact" flags="ng" index="eFf55">
         <child id="5895561670197229065" name="neighbor_particle" index="ekCwj" />
       </concept>
+      <concept id="8949041295588321500" name="openpme.core.structure.EvolveReference" flags="ng" index="2jTC_S">
+        <reference id="8949041295588321825" name="evolve" index="2jTCI5" />
+      </concept>
+      <concept id="8949041295588322116" name="openpme.core.structure.InteractReference" flags="ng" index="2jTCFw">
+        <reference id="8949041295588323341" name="interact" index="2jTD6D" />
+      </concept>
+      <concept id="8949041295588386095" name="openpme.core.structure.PositionPropertyReference" flags="ng" index="2jUoib" />
       <concept id="6859799677638878396" name="openpme.core.structure.WriteParticles" flags="ng" index="ncWfa">
         <child id="6859799677638878397" name="container" index="ncWfb" />
       </concept>
@@ -110,9 +116,6 @@
       <concept id="3115149955004136908" name="openpme.core.structure.ParticleDistanceNorm" flags="ng" index="L8O6H">
         <child id="3115149955004137107" name="self" index="L8ObM" />
         <child id="3115149955004137230" name="neighbor" index="L8OdJ" />
-      </concept>
-      <concept id="3115149955013400790" name="openpme.core.structure.CallEvolvePosition" flags="ng" index="LBIiR">
-        <child id="4975907780726575930" name="containerReference" index="sgEFT" />
       </concept>
       <concept id="5481292159167678175" name="openpme.core.structure.FieldContainerReference" flags="ng" index="PgV3M">
         <reference id="5481292159167678176" name="container" index="PgV3d" />
@@ -302,6 +305,9 @@
               <node concept="2G0pd6" id="49MCs89aMw5" role="ekCG_">
                 <property role="TrG5h" value="p_force" />
               </node>
+              <node concept="2qjxXw" id="1tRyLoZv9uT" role="2jUoip">
+                <ref role="2qjxXB" node="1BptRE9bQu4" resolve="force" />
+              </node>
             </node>
           </node>
           <node concept="eibuR" id="1BptRE9bQ_x" role="eiaWX">
@@ -344,6 +350,9 @@
               <node concept="2G0pd6" id="1BptRE9bQ__" role="ekCG_">
                 <property role="TrG5h" value="p_velocity" />
               </node>
+              <node concept="2qjxXw" id="1tRyLoZv9uV" role="2jUoip">
+                <ref role="2qjxXB" node="1BptRE9bQtZ" resolve="velocity" />
+              </node>
             </node>
           </node>
           <node concept="eibuR" id="5FfyC0pT9Ao" role="eiaWX">
@@ -378,6 +387,7 @@
               <node concept="2G0pd6" id="5FfyC0pT9As" role="ekCG_">
                 <property role="TrG5h" value="p_position" />
               </node>
+              <node concept="2jUoib" id="1tRyLoZv9uX" role="2jUoip" />
             </node>
           </node>
           <node concept="1Rqx6$" id="1BptRE9bQtZ" role="28xOHc">
@@ -545,43 +555,31 @@
               </node>
             </node>
           </node>
-          <node concept="eiJ_H" id="49MCs89aMpR" role="1wvtUr">
-            <node concept="2qjxXw" id="49MCs89aMqU" role="sgxs9">
-              <ref role="2qjxXB" node="1BptRE9bQu4" resolve="force" />
-            </node>
-            <node concept="PgV3M" id="49MCs89aMqX" role="sgxsd">
-              <ref role="PgV3d" node="1BptRE9bQtY" resolve="particles" />
+          <node concept="eiJ_H" id="1tRyLoZv9$v" role="1wvtUr">
+            <node concept="2jTCFw" id="1tRyLoZv9Bj" role="2jUojP">
+              <ref role="2jTD6D" node="49MCs89aMw1" />
             </node>
           </node>
           <node concept="SCFH9" id="49MCs89aMrZ" role="1wvtUr">
             <node concept="1wvtUh" id="49MCs89aMs1" role="oWeDG">
-              <node concept="eiJBv" id="49MCs89aMt8" role="1wvtUr">
-                <node concept="2qjxXw" id="49MCs89aMth" role="PgUB3">
-                  <ref role="2qjxXB" node="1BptRE9bQtZ" resolve="velocity" />
-                </node>
-                <node concept="PgV3M" id="49MCs89aMtk" role="PgUBs">
-                  <ref role="PgV3d" node="1BptRE9bQtY" resolve="particles" />
+              <node concept="eiJBv" id="1tRyLoZv9EM" role="1wvtUr">
+                <node concept="2jTC_S" id="1tRyLoZv9G_" role="2jUojA">
+                  <ref role="2jTCI5" node="1BptRE9bQ_y" />
                 </node>
               </node>
-              <node concept="eiJ_H" id="49MCs89aMts" role="1wvtUr">
-                <node concept="2qjxXw" id="49MCs89aMtC" role="sgxs9">
-                  <ref role="2qjxXB" node="1BptRE9bQu4" resolve="force" />
-                </node>
-                <node concept="PgV3M" id="49MCs89aMtF" role="sgxsd">
-                  <ref role="PgV3d" node="1BptRE9bQtY" resolve="particles" />
+              <node concept="eiJ_H" id="1tRyLoZv9K2" role="1wvtUr">
+                <node concept="2jTCFw" id="1tRyLoZv9LO" role="2jUojP">
+                  <ref role="2jTD6D" node="49MCs89aMw1" />
                 </node>
               </node>
-              <node concept="LBIiR" id="49MCs89aMtQ" role="1wvtUr">
-                <node concept="PgV3M" id="49MCs89aMu2" role="sgEFT">
-                  <ref role="PgV3d" node="1BptRE9bQtY" resolve="particles" />
+              <node concept="eiJBv" id="1tRyLoZv9Ph" role="1wvtUr">
+                <node concept="2jTC_S" id="1tRyLoZv9R3" role="2jUojA">
+                  <ref role="2jTCI5" node="5FfyC0pT9Ap" />
                 </node>
               </node>
-              <node concept="eiJBv" id="49MCs89aMuf" role="1wvtUr">
-                <node concept="2qjxXw" id="49MCs89aMuw" role="PgUB3">
-                  <ref role="2qjxXB" node="1BptRE9bQtZ" resolve="velocity" />
-                </node>
-                <node concept="PgV3M" id="49MCs89aMuz" role="PgUBs">
-                  <ref role="PgV3d" node="1BptRE9bQtY" resolve="particles" />
+              <node concept="eiJBv" id="1tRyLoZv9Uu" role="1wvtUr">
+                <node concept="2jTC_S" id="1tRyLoZv9Wf" role="2jUojA">
+                  <ref role="2jTCI5" node="1BptRE9bQ_y" />
                 </node>
               </node>
               <node concept="1GH9$S" id="49MCs89aMuN" role="1wvtUr">
