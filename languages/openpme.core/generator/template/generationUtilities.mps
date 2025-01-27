@@ -9,7 +9,6 @@
     <import index="5oki" ref="r:ebc5ff6c-54ad-44cc-986b-956c5e8ea76e(openpme.statements.structure)" implicit="true" />
     <import index="r2co" ref="r:15616bdb-5f06-41a2-ba85-ee0c68a0d3dd(openpme.core.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="trr3" ref="r:9e07d8a5-7e5e-4255-9575-a4c0fe6c7c8f(openpme.core.behavior)" implicit="true" />
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
@@ -100,6 +99,9 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
+      <concept id="5497648299878491908" name="jetbrains.mps.baseLanguage.structure.BaseVariableReference" flags="nn" index="1M0zk4">
+        <reference id="5497648299878491909" name="baseVariableDeclaration" index="1M0zk5" />
+      </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
         <child id="1350122676458893092" name="text" index="3ndbpf" />
       </concept>
@@ -143,6 +145,14 @@
         <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
         <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
       </concept>
+      <concept id="1883223317721008708" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfStatement" flags="nn" index="Jncv_">
+        <reference id="1883223317721008712" name="nodeConcept" index="JncvD" />
+        <child id="1883223317721008709" name="body" index="Jncv$" />
+        <child id="1883223317721008711" name="variable" index="JncvA" />
+        <child id="1883223317721008710" name="nodeExpression" index="JncvB" />
+      </concept>
+      <concept id="1883223317721008713" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfVariable" flags="ng" index="JncvC" />
+      <concept id="1883223317721107059" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfVarReference" flags="nn" index="Jnkvi" />
       <concept id="1171305280644" name="jetbrains.mps.lang.smodel.structure.Node_GetDescendantsOperation" flags="nn" index="2Rf3mk" />
       <concept id="1154546950173" name="jetbrains.mps.lang.smodel.structure.ConceptReference" flags="ng" index="3gn64h">
         <reference id="1154546997487" name="concept" index="3gnhBz" />
@@ -735,19 +745,6 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="4M$IA4tSSH" role="3cqZAp">
-          <node concept="2OqwBi" id="4M$IA4tTbF" role="3clFbG">
-            <node concept="37vLTw" id="4M$IA4tSSF" role="2Oq$k0">
-              <ref role="3cqZAo" node="6hRBV67GSe4" resolve="itVar" />
-            </node>
-            <node concept="2qgKlT" id="4M$IA4tTqP" role="2OqNvi">
-              <ref role="37wK5l" to="trr3:4M$IA4tHxl" resolve="updateContainer" />
-              <node concept="37vLTw" id="4M$IA4tTyO" role="37wK5m">
-                <ref role="3cqZAo" node="6hRBV67H$Wz" resolve="container" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3cpWs8" id="6hRBV67M51W" role="3cqZAp">
           <node concept="3cpWsn" id="6hRBV67M51Z" role="3cpWs9">
             <property role="TrG5h" value="iterable" />
@@ -885,19 +882,6 @@
             </node>
           </node>
           <node concept="3clFbS" id="6hRBV67HR3t" role="2LFqv$">
-            <node concept="3clFbF" id="4M$IA4tUep" role="3cqZAp">
-              <node concept="2OqwBi" id="4M$IA4tUnb" role="3clFbG">
-                <node concept="2GrUjf" id="4M$IA4tUen" role="2Oq$k0">
-                  <ref role="2Gs0qQ" node="6hRBV67HR3p" resolve="baseaccess" />
-                </node>
-                <node concept="2qgKlT" id="4M$IA4tUI8" role="2OqNvi">
-                  <ref role="37wK5l" to="trr3:4M$IA4tHxl" resolve="updateContainer" />
-                  <node concept="37vLTw" id="4M$IA4tULX" role="37wK5m">
-                    <ref role="3cqZAo" node="6hRBV67H$Wz" resolve="container" />
-                  </node>
-                </node>
-              </node>
-            </node>
             <node concept="3clFbF" id="6hRBV67HWxc" role="3cqZAp">
               <node concept="37vLTI" id="6hRBV67HXdn" role="3clFbG">
                 <node concept="37vLTw" id="6hRBV67HXjS" role="37vLTx">
@@ -974,6 +958,75 @@
         <node concept="TZ5HA" id="3GJXvJOxIqe" role="TZ5H$">
           <node concept="1dT_AC" id="3GJXvJOxIqf" role="1dT_Ay">
             <property role="1dT_AB" value="return the statement which should replace the container access statement" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2YIFZL" id="2dHf$lJEKSe" role="jymVt">
+      <property role="TrG5h" value="getLoopItVar" />
+      <node concept="37vLTG" id="2dHf$lJELnD" role="3clF46">
+        <property role="TrG5h" value="loop" />
+        <node concept="3Tqbb2" id="2dHf$lJELpt" role="1tU5fm">
+          <ref role="ehGHo" to="r2co:7mV$Q_d6GL2" resolve="Loop" />
+        </node>
+      </node>
+      <node concept="3clFbS" id="2dHf$lJEKSh" role="3clF47">
+        <node concept="Jncv_" id="2dHf$lJElbe" role="3cqZAp">
+          <ref role="JncvD" to="r2co:28VDvkeJS67" resolve="FieldLoop" />
+          <node concept="37vLTw" id="2dHf$lJELOb" role="JncvB">
+            <ref role="3cqZAo" node="2dHf$lJELnD" resolve="loop" />
+          </node>
+          <node concept="3clFbS" id="2dHf$lJElbg" role="Jncv$">
+            <node concept="3cpWs6" id="2dHf$lJEMI8" role="3cqZAp">
+              <node concept="2OqwBi" id="2dHf$lJElX9" role="3cqZAk">
+                <node concept="Jnkvi" id="2dHf$lJEmmL" role="2Oq$k0">
+                  <ref role="1M0zk5" node="2dHf$lJElbh" resolve="fl" />
+                </node>
+                <node concept="3TrEf2" id="2dHf$lJEmBr" role="2OqNvi">
+                  <ref role="3Tt5mk" to="r2co:28VDvkeJS6a" resolve="node" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="JncvC" id="2dHf$lJElbh" role="JncvA">
+            <property role="TrG5h" value="fl" />
+            <node concept="2jxLKc" id="2dHf$lJElbi" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="Jncv_" id="2dHf$lJEmMZ" role="3cqZAp">
+          <ref role="JncvD" to="r2co:1d1jgI9zUI$" resolve="NeighborhoodLoop" />
+          <node concept="37vLTw" id="2dHf$lJEPSh" role="JncvB">
+            <ref role="3cqZAo" node="2dHf$lJELnD" resolve="loop" />
+          </node>
+          <node concept="3clFbS" id="2dHf$lJEmN3" role="Jncv$">
+            <node concept="3cpWs6" id="2dHf$lJEMPG" role="3cqZAp">
+              <node concept="2OqwBi" id="2dHf$lJEN6d" role="3cqZAk">
+                <node concept="Jnkvi" id="2dHf$lJEMQ$" role="2Oq$k0">
+                  <ref role="1M0zk5" node="2dHf$lJEmN5" resolve="nl" />
+                </node>
+                <node concept="3TrEf2" id="2dHf$lJEON_" role="2OqNvi">
+                  <ref role="3Tt5mk" to="r2co:1d1jgI9zUI_" resolve="particle" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="JncvC" id="2dHf$lJEmN5" role="JncvA">
+            <property role="TrG5h" value="nl" />
+            <node concept="2jxLKc" id="2dHf$lJEmN6" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="3cpWs6" id="2dHf$lJEPXW" role="3cqZAp">
+          <node concept="10Nm6u" id="2dHf$lJEQ8w" role="3cqZAk" />
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="2dHf$lJEKEP" role="1B3o_S" />
+      <node concept="3Tqbb2" id="2dHf$lJEKP0" role="3clF45">
+        <ref role="ehGHo" to="5oki:aSJlMIIiSq" resolve="VariableDeclaration" />
+      </node>
+      <node concept="P$JXv" id="2dHf$lJELCo" role="lGtFl">
+        <node concept="TZ5HA" id="2dHf$lJELCp" role="TZ5H$">
+          <node concept="1dT_AC" id="2dHf$lJELCq" role="1dT_Ay">
+            <property role="1dT_AB" value="get iteration variable of given loop or null if theres none" />
           </node>
         </node>
       </node>
