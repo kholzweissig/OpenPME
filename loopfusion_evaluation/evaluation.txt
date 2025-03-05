@@ -1,0 +1,54 @@
+loop fusion evaluation:
+- VC: Vertex in Cell, 20 time steps only
+- GS: Gray Scott
+- LJ: Lennard Jones
+- improve: improved version of the solutions above
+- master: base version of the solutions above
+- comparing realtime only
+- using ./m.sh for creating measurements of one setup
+
+execution order: from left to right and from top to bottom
+1. improve1: VC;LJ;GS
+2. master1: VC;LJ;GS
+3. improve2: VC;LJ;GS
+4. master2: VC;LJ;GS
+5. GS: improve3;master3
+6. LJ: improve3;master3
+7. VC: improve3;master3
+
+VC improve1 5m47.177s .. 5m47.808s (~5m45.533s)
+VC master1 5m36.423s .. 5m36.796s (~5m35.854s)
+VC improve2 5m26.146s .. 5m35.392s (~5m33.089s)
+VC master2 5m30.706s .. 5m32.170s (~5m30.402s)
+VC improve3 5m29.164s .. 5m31.757s (~5m30.787s)
+VC master3 5m29.842s .. 5m41.994s (~5m34.995s)
+
+LJ improve1 0m17.739s .. 0m19.403s (~0m18.551s)
+LJ master1 0m12.550s .. 0m12.917s (~0m12.919s)
+LJ improve2 0m12.537s .. 0m12.698s (~0m12.678s)
+LJ master2 0m12.627s .. 0m12.799s (~0m12.724s)
+LJ improve3 0m12.494s .. 0m12.827s (~0m12.700s)
+LJ master3 0m12.709s .. 0m12.803s (~0m12.713s)
+
+GS improve1 1m30.697s .. 1m29.984s (~1m29.974s)
+GS master1 1m22.162s .. 1m23.026s (~1m22.816s)
+GS improve2 1m12.674s .. 1m13.841s (~1m13.534s)
+GS master2 1m22.290s .. 1m24.835s (~1m23.821s)
+GS improve3 1m12.309s .. 1m13.113s (~1m12.964s)
+GS master3 1m19.986s .. 1m22.442s (~1m21.376s)
+
+observation: first measurements of each solution seem to be outliers
+ - probably due do cache misses
+
+total aggregated execution times excluding outliers:
+VC master: 5m33.750s
+VC improve: 5m31.938s
+LJ master: 0m12.785s
+LJ improve: 0m12.689s
+GS master: 1m22.671s
+GS improve: 1m13.249s
+
+observation: loop fusion reduces simulation execution times
+- VC: - ~2s
+- LJ: - ~100ms
+- GS: - ~10s
