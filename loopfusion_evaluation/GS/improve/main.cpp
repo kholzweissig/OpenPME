@@ -56,8 +56,7 @@ int main(int argc, char* argv[])
     New.template get<Vn>(loopNode) = 0.0;
     ++mloop_iterator_f0a0;
   }
-  New.template ghost_get<Vn>();
-  New.template ghost_get<Un>();
+  New.template ghost_get<Un, Vn>();
   Old.load("init_mesh.hdf5");
   Old.template ghost_get<Uo, Vo>();
   int i = 0;
@@ -67,16 +66,15 @@ int main(int argc, char* argv[])
   {
     
     // Mesh loop
-    auto mloop_iterator_a0l0a0 = New.getDomainIterator();
-    while (mloop_iterator_a0l0a0.isNext())
+    auto mloop_iterator_a0k0a0 = New.getDomainIterator();
+    while (mloop_iterator_a0k0a0.isNext())
     {
-      auto loopNode = mloop_iterator_a0l0a0.get();
+      auto loopNode = mloop_iterator_a0k0a0.get();
       New.template get<Un>(loopNode) = (Old.template get<Uo>(loopNode) + (dt * ((du * (((((Old.template get<Uo>(loopNode.move(0, 1)) + Old.template get<Uo>(loopNode.move(0, -1))) / (Old.spacing(0) * Old.spacing(0))) + ((Old.template get<Uo>(loopNode.move(1, 1)) + Old.template get<Uo>(loopNode.move(1, -1))) / (Old.spacing(1) * Old.spacing(1)))) + ((Old.template get<Uo>(loopNode.move(2, 1)) + Old.template get<Uo>(loopNode.move(2, -1))) / (Old.spacing(2) * Old.spacing(2)))) - (2 * (Old.template get<Uo>(loopNode) * (((1 / (Old.spacing(0) * Old.spacing(0))) + (1 / (Old.spacing(1) * Old.spacing(1)))) + (1 / (Old.spacing(2) * Old.spacing(2)))))))) - ((Old.template get<Uo>(loopNode) * (Old.template get<Vo>(loopNode) * Old.template get<Vo>(loopNode))) - (F * (1.0 - Old.template get<Uo>(loopNode)))))));
       New.template get<Vn>(loopNode) = (Old.template get<Vo>(loopNode) + (dt * ((dv * (((((Old.template get<Vo>(loopNode.move(0, 1)) + Old.template get<Vo>(loopNode.move(0, -1))) / (Old.spacing(0) * Old.spacing(0))) + ((Old.template get<Vo>(loopNode.move(1, 1)) + Old.template get<Vo>(loopNode.move(1, -1))) / (Old.spacing(1) * Old.spacing(1)))) + ((Old.template get<Vo>(loopNode.move(2, 1)) + Old.template get<Vo>(loopNode.move(2, -1))) / (Old.spacing(2) * Old.spacing(2)))) - (2 * (Old.template get<Vo>(loopNode) * (((1 / (Old.spacing(0) * Old.spacing(0))) + (1 / (Old.spacing(1) * Old.spacing(1)))) + (1 / (Old.spacing(2) * Old.spacing(2)))))))) + ((Old.template get<Uo>(loopNode) * (Old.template get<Vo>(loopNode) * Old.template get<Vo>(loopNode))) - ((F + K) * Old.template get<Vo>(loopNode))))));
-      ++mloop_iterator_a0l0a0;
+      ++mloop_iterator_a0k0a0;
     }
-    New.template ghost_get<Vn>();
-    New.template ghost_get<Un>();
+    New.template ghost_get<Un, Vn>();
     Old.copy(New);
     Old.template ghost_get<Uo, Vo>();
     if (i % 500 == 0)

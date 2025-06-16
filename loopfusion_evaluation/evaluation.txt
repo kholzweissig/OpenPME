@@ -6,49 +6,46 @@ loop fusion evaluation:
 - master: base version of the solutions above
 - comparing realtime only
 - using ./m.sh for creating measurements of one setup
+- setup = solution in a version
 
 execution order: from left to right and from top to bottom
-1. improve1: VC;LJ;GS
-2. master1: VC;LJ;GS
-3. improve2: VC;LJ;GS
-4. master2: VC;LJ;GS
-5. GS: improve3;master3
-6. LJ: improve3;master3
-7. VC: improve3;master3
+1. improve: VC;LJ;GS
+2. master: VC;LJ;GS
+3. improve: VC;LJ;GS
+4. master: VC;LJ;GS
+5. GS: improve;master
+6. LJ: improve;master
+7. VC: improve;master
 
-VC improve1 5m47.177s .. 5m47.808s (~5m45.533s)
-VC master1 5m36.423s .. 5m36.796s (~5m35.854s)
-VC improve2 5m26.146s .. 5m35.392s (~5m33.089s)
-VC master2 5m30.706s .. 5m32.170s (~5m30.402s)
-VC improve3 5m29.164s .. 5m31.757s (~5m30.787s)
-VC master3 5m29.842s .. 5m41.994s (~5m34.995s)
+execution results: 
+- referring to executions using syntax "<solution> <version> <iteration>"
+- duration after tilde represents equally weighted aggregation of previous durations 
+GS improve 1 1m9.474s 1m10.375s 1m10.301s ~1m10.050s
+GS improve 2 1m9.324s 1m10.157s 1m10.029s ~1m9.83s
+GS improve 3 1m9.720s 1m10.594s 1m14.362s ~1m11.559s
+GS improve ~1m10.231s
+GS master 1 1m40.533s 1m45.169s 1m50.101s ~1m45.268s
+GS master 2 1m41.258s 1m55.162s 1m53.237s ~1m49.886s
+GS master 3 1m47.158s 1m52.175s 1m53.489s ~1m50.941s
+GS master ~1m48.698s
+LJ improve 1 0m12.303s 0m12.308s 0m12.296s ~0m12.302s
+LJ improve 2 0m12.342s 0m12.377s 0m12.978s ~0m12.566s 
+LJ improve 3 0m12.341s 0m12.363s 0m12.366s ~0m12.357s 
+LJ improve ~0m12.408s
+LJ master 1 0m11.181s 0m11.179s 0m11.174s ~0m11.178s 
+LJ master 2 0m11.239s 0m11.299s 0m11.211s ~0m11.250s
+LJ master 3 0m11.170s 0m11.220s 0m11.356s ~0m11.249s
+LJ master ~0m11.226s
+VC improve 1 5m38.361s 5m44.936s 5m40.144s ~5m41.147s 
+VC improve 2 5m42.154s 5m41.960s 5m43.811s ~5m42.642s
+VC improve 3 5m39.150s 5m43.959s 5m39.699s ~5m40.936s
+VC improve ~5m41.575s
+VC master 1 5m43.139s 5m48.820s 5m43.013s ~5m44.991s
+VC master 2 5m42.468s 5m44.363s 5m43.616s ~5m43.482s
+VC master 3 5m41.729s 5m36.845s 5m41.796s ~5m40.123s
+VC master ~5m42.865s
 
-LJ improve1 0m17.739s .. 0m19.403s (~0m18.551s)
-LJ master1 0m12.550s .. 0m12.917s (~0m12.919s)
-LJ improve2 0m12.537s .. 0m12.698s (~0m12.678s)
-LJ master2 0m12.627s .. 0m12.799s (~0m12.724s)
-LJ improve3 0m12.494s .. 0m12.827s (~0m12.700s)
-LJ master3 0m12.709s .. 0m12.803s (~0m12.713s)
-
-GS improve1 1m30.697s .. 1m29.984s (~1m29.974s)
-GS master1 1m22.162s .. 1m23.026s (~1m22.816s)
-GS improve2 1m12.674s .. 1m13.841s (~1m13.534s)
-GS master2 1m22.290s .. 1m24.835s (~1m23.821s)
-GS improve3 1m12.309s .. 1m13.113s (~1m12.964s)
-GS master3 1m19.986s .. 1m22.442s (~1m21.376s)
-
-observation: first measurements of each solution seem to be outliers
- - probably due do cache misses
-
-total aggregated execution times excluding outliers:
-VC master: 5m33.750s
-VC improve: 5m31.938s
-LJ master: 0m12.785s
-LJ improve: 0m12.689s
-GS master: 1m22.671s
-GS improve: 1m13.249s
-
-observation: loop fusion reduces simulation execution times
-- VC: - ~2s
-- LJ: - ~100ms
-- GS: - ~10s
+evaluation results: 
+- GS: - 45s (+35% speedup) 
+- LJ: + 1s (-10% speedup)
+- VC: - 1s (no speedup)

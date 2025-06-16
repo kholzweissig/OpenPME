@@ -19,11 +19,12 @@ Container assignments, or: expressions which contain an assignment and a `BaseAc
 There is a script `apply_dataflow_modifications` which will be run before other code generation rules will be applied, which removes all statements which are marked as unused by the dataflow engine. The script performs a dataflow analysis and removes unreachable code/unused assignments until the analysis doesnt report any more warnings.  
 the script `loop_fusion` will be run after all generation steps of the core language are done. it detects and joins all sequential loops of the same type and container.
 Some statements need a reference to a field container for code generation. For example, an iteration variable needs to know over which container it should iterate over. In this case the concept implements in a mps way the `IContainer` interface. For updating the container of such an object, the `ContainmentUtilClass` exists. 
-some minor changes include:
+Some minor changes include:
 - updated dimension retrieval in the reduction rule for `StencilMeshLoop`.
 - removing a `CutoffRef` no longer leads to removing the cutoff value.
 - if a `VisualizeParticles` file name is specified, it will be used when `WriteParticles` instances will be reduced.
+- script `add_resync_in_mloop` now adds one `ghost_get` call for each modified container containing all of its modified properties.  
 - fixed script `add_celllist` for input models with multiple input roots.
 ### Evaluation
 All solutions are updated to the new model. Most improvements of this branch do not directly contribute to the performance or code quality of the generated code.
-Running a dataflow analysis over existing solutions does not result in many warnings. The generated code contains some joined loops. The directory `./loopfusion_evaluation` contains a performance evaluation for the `Use-cases_LK` solutions.
+Running a dataflow analysis over existing solutions does not result in many warnings. The generated code contains some joined loops. The directory `./loopfusion_evaluation` contains a performance evaluation for the `Use-cases_LK` solutions. The code generation improvements lead to an increase of the performance of the generated code for the Gray Scott simulation by 35% (45 seconds). However for the Lennard Jones simulation, theres a performance decrease by 10% (1 second). Theres no significant performance gain for the Vortex-in-Cell simulation. Main cause of the performance gain is the reduced communication across processors introduced by joined Mesh loops, which contain multiple assignments of different properties. Which is only the case for the Gray Scott simulation. Its unclear why the Lennard Jones simulation performs worse than before.
