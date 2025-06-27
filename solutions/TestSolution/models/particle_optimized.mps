@@ -22,7 +22,7 @@
         <child id="6473026355838427228" name="size" index="28EmXK" />
       </concept>
       <concept id="6859799677638878396" name="openpme.core.structure.WriteParticles" flags="ng" index="ncWfa">
-        <child id="6859799677638878397" name="container" index="ncWfb" />
+        <child id="8343334992187134424" name="container" index="0FYGw" />
       </concept>
       <concept id="6859799677634816955" name="openpme.core.structure.SumPrintVariable" flags="ng" index="oWsNd">
         <child id="6859799677634816958" name="ref" index="oWsN8" />
@@ -914,9 +914,9 @@
                       <ref role="1Xh6_M" node="1BptRE9bQHb" resolve="E" />
                     </node>
                   </node>
-                  <node concept="ncWfa" id="4EWA5cPPta_" role="1wvtUr">
-                    <node concept="1XiV_f" id="6Md0FbbHU0o" role="ncWfb">
-                      <ref role="1Xh6_M" node="6Md0FbbHTiZ" resolve="particles" />
+                  <node concept="ncWfa" id="41SUG6skjgP" role="1wvtUr">
+                    <node concept="PgV3M" id="41SUG6skjgX" role="0FYGw">
+                      <ref role="PgV3d" node="6Md0FbbHTiZ" resolve="particles" />
                     </node>
                   </node>
                 </node>

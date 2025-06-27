@@ -1,0 +1,43 @@
+loop fusion evaluation:
+- VC: Vertex in Cell, 20 time steps only
+- GS: Gray Scott
+- LJ: Lennard Jones
+- improve: improved version of the solutions above
+- master: base version of the solutions above
+- comparing realtime only
+- using ./m.sh for creating measurements of one setup
+- setup = solution in a version
+
+execution order: from left to right and from top to bottom
+1. improve: VC;LJ;GS
+2. master: VC;LJ;GS
+3. GS: improve;master 
+4. LJ: improve;master 
+5. VC: improve;master
+
+execution results: 
+- referring to executions using syntax "<solution> <version> <iteration>"
+- duration after tilde represents equally weighted aggregation of previous durations 
+GS improve 1 1m2.192s 1m3.837s 1m8.324s ~1m4.784s
+GS improve 2 1m2.180s 1m14.927s 1m11.619s ~1m9.575s
+GS improve ~1m7.180s
+GS master 1 1m47.061s 1m58.872s 1m59.136s ~1m55.023s 
+GS master 2 1m46.794s 1m46.794s 2m4.487s ~1m52.692s
+GS master ~1m53.858s
+LJ improve 1 0m12.386s 0m12.432s 0m12.368s ~0m12.395s
+LJ improve 2 0m11.961s 0m11.880s 0m12.052s ~0m11.964s
+LJ improve ~0m12.180s
+LJ master 1 0m11.128s 0m10.841s 0m10.773s ~0m10.914s
+LJ master 2 0m11.039s 0m11.005s 0m10.702s ~0m10.915s
+LJ master ~0m10.915s
+VC improve 1 5m22.696s 5m29.789s 5m33.264s ~5m28.583s
+VC improve 2 5m26.314s 5m33.825s 5m33.558s ~5m31.232s
+VC improve ~5m29.908s
+VC master 1 5m24.474s 5m36.914s 5m34.037s ~5m31.808s
+VC master 2 5m29.823s 5m36.732s 5m35.625s ~5m34.060s
+VC master ~5m32.934s
+
+evaluation results: 
+- GS: - 45s (+40% speedup) 
+- LJ: + 1s (-10% speedup)
+- VC: - 3s (+1% speedup)

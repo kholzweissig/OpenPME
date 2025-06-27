@@ -51,6 +51,7 @@
       </concept>
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
+      <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
@@ -159,6 +160,8 @@
       <concept id="1883223317721008713" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfVariable" flags="ng" index="JncvC" />
       <concept id="1883223317721107059" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfVarReference" flags="nn" index="Jnkvi" />
       <concept id="1171305280644" name="jetbrains.mps.lang.smodel.structure.Node_GetDescendantsOperation" flags="nn" index="2Rf3mk" />
+      <concept id="1171310072040" name="jetbrains.mps.lang.smodel.structure.Node_GetContainingRootOperation" flags="nn" index="2Rxl7S" />
+      <concept id="1171407110247" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorOperation" flags="nn" index="2Xjw5R" />
       <concept id="1154546950173" name="jetbrains.mps.lang.smodel.structure.ConceptReference" flags="ng" index="3gn64h">
         <reference id="1154546997487" name="concept" index="3gnhBz" />
       </concept>
@@ -1205,6 +1208,89 @@
         </node>
       </node>
     </node>
+    <node concept="2YIFZL" id="2UbfYJVtIIv" role="jymVt">
+      <property role="TrG5h" value="getCellListDeclaration" />
+      <node concept="37vLTG" id="2UbfYJVtISa" role="3clF46">
+        <property role="TrG5h" value="particleContainer" />
+        <node concept="3Tqbb2" id="2UbfYJVtIUb" role="1tU5fm">
+          <ref role="ehGHo" to="r2co:1MYyjtFOOxy" resolve="Particle" />
+        </node>
+      </node>
+      <node concept="3clFbS" id="2UbfYJVtIIy" role="3clF47">
+        <node concept="3cpWs6" id="2UbfYJW8JvP" role="3cqZAp">
+          <node concept="2OqwBi" id="2UbfYJWCBD2" role="3cqZAk">
+            <node concept="2OqwBi" id="2UbfYJWC_QM" role="2Oq$k0">
+              <node concept="2OqwBi" id="2UbfYJWC_QN" role="2Oq$k0">
+                <node concept="2OqwBi" id="2UbfYJWC_QO" role="2Oq$k0">
+                  <node concept="2OqwBi" id="2UbfYJWC_QP" role="2Oq$k0">
+                    <node concept="37vLTw" id="2UbfYJWC_QQ" role="2Oq$k0">
+                      <ref role="3cqZAo" node="2UbfYJVtISa" resolve="particleContainer" />
+                    </node>
+                    <node concept="2Rxl7S" id="2UbfYJWC_QR" role="2OqNvi" />
+                  </node>
+                  <node concept="2Rf3mk" id="2UbfYJWC_QS" role="2OqNvi">
+                    <node concept="1xMEDy" id="2UbfYJWC_QT" role="1xVPHs">
+                      <node concept="chp4Y" id="2UbfYJWC_QU" role="ri$Ld">
+                        <ref role="cht4Q" to="r2co:1d1jgI8ZEta" resolve="CreateCellList" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3zZkjj" id="2UbfYJWC_QV" role="2OqNvi">
+                  <node concept="1bVj0M" id="2UbfYJWC_QW" role="23t8la">
+                    <node concept="3clFbS" id="2UbfYJWC_QX" role="1bW5cS">
+                      <node concept="3clFbF" id="2UbfYJWC_QY" role="3cqZAp">
+                        <node concept="3clFbC" id="2UbfYJWC_QZ" role="3clFbG">
+                          <node concept="37vLTw" id="2UbfYJWC_R0" role="3uHU7w">
+                            <ref role="3cqZAo" node="2UbfYJVtISa" resolve="particleContainer" />
+                          </node>
+                          <node concept="2OqwBi" id="2UbfYJWC_R1" role="3uHU7B">
+                            <node concept="2OqwBi" id="2UbfYJWC_R2" role="2Oq$k0">
+                              <node concept="3TrEf2" id="2UbfYJWC_R3" role="2OqNvi">
+                                <ref role="3Tt5mk" to="r2co:1d1jgI8ZEtf" resolve="vector" />
+                              </node>
+                              <node concept="37vLTw" id="2UbfYJWC_R4" role="2Oq$k0">
+                                <ref role="3cqZAo" node="2UbfYJWC_R6" resolve="createCellListExpr" />
+                              </node>
+                            </node>
+                            <node concept="3TrEf2" id="2UbfYJWC_R5" role="2OqNvi">
+                              <ref role="3Tt5mk" to="r2co:4KhtyPTkGrw" resolve="container" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="2UbfYJWC_R6" role="1bW2Oz">
+                      <property role="TrG5h" value="createCellListExpr" />
+                      <node concept="2jxLKc" id="2UbfYJWC_R7" role="1tU5fm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="1uHKPH" id="2UbfYJWC_R8" role="2OqNvi" />
+            </node>
+            <node concept="2Xjw5R" id="2UbfYJWCCdu" role="2OqNvi">
+              <node concept="1xMEDy" id="2UbfYJWCCdw" role="1xVPHs">
+                <node concept="chp4Y" id="2UbfYJWCChh" role="ri$Ld">
+                  <ref role="cht4Q" to="5oki:aSJlMIIiSq" resolve="VariableDeclaration" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="2UbfYJVtFVO" role="1B3o_S" />
+      <node concept="3Tqbb2" id="2UbfYJVtG76" role="3clF45">
+        <ref role="ehGHo" to="5oki:aSJlMIIiSq" resolve="VariableDeclaration" />
+      </node>
+      <node concept="P$JXv" id="2UbfYJVu2Bv" role="lGtFl">
+        <node concept="TZ5HA" id="2UbfYJVu2Bw" role="TZ5H$">
+          <node concept="1dT_AC" id="2UbfYJVu2Bx" role="1dT_Ay">
+            <property role="1dT_AB" value="get variable declaration of the cell list over particle container particleContainer, else null" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="2YIFZL" id="6hRBV67XSLW" role="jymVt">
       <property role="TrG5h" value="p" />
       <node concept="3clFbS" id="6hRBV67XSLZ" role="3clF47">
@@ -1226,8 +1312,13 @@
           <node concept="3clFbS" id="6hRBV67XSYE" role="3clFbx">
             <node concept="2xdQw9" id="6hRBV67XTiy" role="3cqZAp">
               <property role="2xdLsb" value="h1akgim/info" />
-              <node concept="Xl_RD" id="6hRBV67XTi$" role="9lYJi">
-                <property role="Xl_RC" value="n is null" />
+              <node concept="3cpWs3" id="2UbfYJVCAx4" role="9lYJi">
+                <node concept="37vLTw" id="2UbfYJVCAy2" role="3uHU7B">
+                  <ref role="3cqZAo" node="2UbfYJVCAhK" resolve="ctx" />
+                </node>
+                <node concept="Xl_RD" id="6hRBV67XTi$" role="3uHU7w">
+                  <property role="Xl_RC" value=" | n is null" />
+                </node>
               </node>
             </node>
             <node concept="3cpWs6" id="6hRBV67XTFr" role="3cqZAp" />
@@ -1237,12 +1328,22 @@
           <property role="2xdLsb" value="h1akgim/info" />
           <node concept="3cpWs3" id="6hRBV67XUFW" role="9lYJi">
             <node concept="3cpWs3" id="6hRBV67XUhe" role="3uHU7B">
-              <node concept="2OqwBi" id="6hRBV67XTOp" role="3uHU7B">
-                <node concept="37vLTw" id="6hRBV67XTHE" role="2Oq$k0">
-                  <ref role="3cqZAo" node="6hRBV67XSUH" resolve="n" />
+              <node concept="3cpWs3" id="2UbfYJVCBvo" role="3uHU7B">
+                <node concept="3cpWs3" id="2UbfYJVCBAw" role="3uHU7B">
+                  <node concept="Xl_RD" id="2UbfYJVCBEf" role="3uHU7w">
+                    <property role="Xl_RC" value=" | " />
+                  </node>
+                  <node concept="37vLTw" id="2UbfYJVCBz9" role="3uHU7B">
+                    <ref role="3cqZAo" node="2UbfYJVCAhK" resolve="ctx" />
+                  </node>
                 </node>
-                <node concept="2qgKlT" id="6hRBV67XTVv" role="2OqNvi">
-                  <ref role="37wK5l" to="tpcu:22G2W3WJ92t" resolve="getDetailedPresentation" />
+                <node concept="2OqwBi" id="6hRBV67XTOp" role="3uHU7w">
+                  <node concept="2qgKlT" id="6hRBV67XTVv" role="2OqNvi">
+                    <ref role="37wK5l" to="tpcu:22G2W3WJ92t" resolve="getDetailedPresentation" />
+                  </node>
+                  <node concept="37vLTw" id="2UbfYJVCBh6" role="2Oq$k0">
+                    <ref role="3cqZAo" node="6hRBV67XSUH" resolve="n" />
+                  </node>
                 </node>
               </node>
               <node concept="Xl_RD" id="6hRBV67XUjT" role="3uHU7w">
@@ -1265,6 +1366,10 @@
       </node>
       <node concept="3Tm1VV" id="6hRBV67XSAv" role="1B3o_S" />
       <node concept="3cqZAl" id="6hRBV67XSKv" role="3clF45" />
+      <node concept="37vLTG" id="2UbfYJVCAhK" role="3clF46">
+        <property role="TrG5h" value="ctx" />
+        <node concept="17QB3L" id="2UbfYJVCAsv" role="1tU5fm" />
+      </node>
       <node concept="37vLTG" id="6hRBV67XSUH" role="3clF46">
         <property role="TrG5h" value="n" />
         <node concept="3Tqbb2" id="6hRBV67XSUG" role="1tU5fm" />

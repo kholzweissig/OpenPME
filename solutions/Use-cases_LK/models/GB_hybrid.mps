@@ -27,7 +27,7 @@
       </concept>
       <concept id="1216331824205856153" name="openpme.core.structure.MP4Interpolation" flags="ng" index="2maVF0" />
       <concept id="6859799677638878396" name="openpme.core.structure.WriteParticles" flags="ng" index="ncWfa">
-        <child id="6859799677638878397" name="container" index="ncWfb" />
+        <child id="8343334992187134424" name="container" index="0FYGw" />
       </concept>
       <concept id="1387474872146285163" name="openpme.core.structure.PropertyReference" flags="ng" index="2qjxXw">
         <reference id="1387474872146285164" name="property" index="2qjxXB" />
@@ -981,9 +981,9 @@
                   </node>
                 </node>
                 <node concept="1wvtUh" id="5l2DoxVDd86" role="1wvtWw">
-                  <node concept="ncWfa" id="5l2DoxVDgue" role="1wvtUr">
-                    <node concept="1XiV_f" id="27Qg4fKemFJ" role="ncWfb">
-                      <ref role="1Xh6_M" node="27Qg4fKempU" resolve="particles" />
+                  <node concept="ncWfa" id="7f9uJxN$peM" role="1wvtUr">
+                    <node concept="PgV3M" id="7f9uJxN$peQ" role="0FYGw">
+                      <ref role="PgV3d" node="27Qg4fKempU" resolve="particles" />
                     </node>
                   </node>
                 </node>

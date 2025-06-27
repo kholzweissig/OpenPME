@@ -54,7 +54,7 @@
       </concept>
       <concept id="8949041295588386095" name="openpme.core.structure.PositionPropertyReference" flags="ng" index="2jUoib" />
       <concept id="6859799677638878396" name="openpme.core.structure.WriteParticles" flags="ng" index="ncWfa">
-        <child id="6859799677638878397" name="container" index="ncWfb" />
+        <child id="8343334992187134424" name="container" index="0FYGw" />
       </concept>
       <concept id="6859799677634816955" name="openpme.core.structure.SumPrintVariable" flags="ng" index="oWsNd">
         <child id="6859799677634816958" name="ref" index="oWsN8" />
@@ -993,9 +993,9 @@
                       <ref role="1Xh6_M" node="5_NQ7X4KCs3" resolve="E" />
                     </node>
                   </node>
-                  <node concept="ncWfa" id="4EWA5cPPta_" role="1wvtUr">
-                    <node concept="1XiV_f" id="4EWA5cPPtaH" role="ncWfb">
-                      <ref role="1Xh6_M" node="5_NQ7X4KCsQ" resolve="molecules" />
+                  <node concept="ncWfa" id="41SUG6skj3z" role="1wvtUr">
+                    <node concept="PgV3M" id="41SUG6skj3F" role="0FYGw">
+                      <ref role="PgV3d" node="5_NQ7X4KCsQ" resolve="molecules" />
                     </node>
                   </node>
                 </node>
